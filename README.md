@@ -6,9 +6,11 @@ This repo consists of files that help you generate JWT Tokens which can be used 
 
 1. Generate public/private keys using the following commands
 
-    `$ openssl genrsa -des3 -out private_encrypted.pem 2048`
-    `$ openssl rsa -pubout -in private_encrypted.pem -out public.pem`
-    `$ openssl rsa -in private_encrypted.pem -out private.pem -outform PEM`
+    ```sh
+    openssl genrsa -des3 -out private_encrypted.pem 2048
+    openssl rsa -pubout -in private_encrypted.pem -out public.pem
+    openssl rsa -in private_encrypted.pem -out private.pem -outform PEM
+    ```
 
 2. Execute `generatekey.py` file to generate a token. Provide appropriate details in payload along with your private key.
 
