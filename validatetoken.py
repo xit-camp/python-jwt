@@ -1,7 +1,11 @@
-JWT_TOKEN="<YOUR_TOKEN>"
-
+import sys
 from authlib.jose import jwt
-public_key = open('public.pem', 'r').read() #Provide path to your public key
-claims = jwt.decode(JWT_TOKEN, public_key)
+
+# 1. argument is public pem key
+# 2. argument is jwt token
+
+public_key = open(sys.argv[1], 'r').read() # Provide path to your public key
+token = open(sys.argv[2], 'r').read().strip()
+claims = jwt.decode(token, public_key)
 claims.validate()
 print(claims)
