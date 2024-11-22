@@ -4,7 +4,7 @@ This repo consists of files that help you generate JWT Tokens which can be used 
 
 ## How to use
 
-0. `pip install Authlib`
+0. `pip install Authlib` or `sudo apt install python3-authlib`
 
 1. Generate public/private keys using the following commands
 
